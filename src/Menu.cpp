@@ -42,10 +42,12 @@ MainMenu::MainMenu(SDL_Surface* pScreen, Config* pConfig)
 		m_pFont = nSDL_LoadFont(MENU_FONT, 255/*R*/, 255/*G*/, 255/*B*/);
 	}
 
+#if 0
 	if( !g_nRelocatedGlobals ) {
         	nl_relocdata((unsigned*)g_Levels, sizeof(g_Levels)/sizeof(g_Levels[0]));
         	g_nRelocatedGlobals = 1;
    	}
+#endif
 
 	UpdateLevelDimensions();
 }
